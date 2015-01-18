@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>money.js table conversion demo</title>
+	<link rel="stylesheet" type="text/css" href="main.css">
+</head>
+
+<body>
+
+	<div id="table"></div>
+
+	<div class="clearfix"></div>
+
+	<p>Select a currency to convert the data:</p>
+
+	<p>
+		<select id="currency">
+			<option value="">Select currency...</option>
+			<optgroup label="Most Common">
+				<option value="GBP">British Pound (GBP)</option>
+				<option value="USD">United States Dollar (USD)</option>
+				<option value="EUR">Euro (EUR)</option>
+				<option value="CNY">Chinese Yuan (CNY)</option>
+				<option value="HKD">Hong Kong Dollar (HKD)</option>
+				<option value="JPY">Japanese Yen (JPY)</option>
+				<option value="AUD">Australian Dollar (AUD)</option>
+				<option value="CAD">Canadian Dollar (CAD)</option>
+			</optgroup>
+		</select>
+
+		&nbsp; &nbsp;
+
+		<input type="submit" id="reset" value="Reset Data" />
+	</p>
+
+	<script type="text/template" id="tableTemplate">
+		<table>
+			<thead>
+				<tr>
+					<% _(tplColumns).each(function(col) { %>
+						<th data-column="<%= col.key %>"><%= col.title %></th>
+					<% }); %>
+				</tr>
+			</thead>
+
+			<tbody>
+				<% _(tplRows).each(function(row) { %>
+					<tr>
+						<% _(row).each(function(value, i) { %>
+							<td class="<%= tplColumns[i].type || '' %>"><%= formatCell(value, tplColumns[i].type) %></td>
+						<% }); %>
+					</tr>
+				<% }); %>
+			</tbody>
+		</table>
+	</script>
+
+	<script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+	<script type="text/javascript" src="libs/accounting.min.js"></script>
+	<script type="text/javascript" src="libs/money.min.js"></script>
+	<script type="text/javascript" src="libs/underscore-min.js"></script>
+	<script type="text/javascript" sr="app.js" />
+	
+</body>
+</html>

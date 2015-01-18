@@ -1,0 +1,21 @@
+{
+  "name": "MoneyJS-Table-Sample",
+  "version": "0.0.0",
+  "authors": [
+    "Amr Reda <amrreda@outlook.com>"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "accounting.js": "~0.3.2",
+    "money.js": "~0.1.3",
+    "underscore": "~1.7.0"
+  }
+}

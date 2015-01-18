@@ -1,0 +1,96 @@
+/* --- CSS Reset & HTML5 Crap --- */
+		html,body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,abbr,
+		address,cite,code,del,dfn,em,img,ins,kbd,q,samp,small,strong,sub,sup,var,b,i,
+		dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,
+		tr,th,td,article,aside,canvas,details,figcaption,figure,footer,header,hgroup,
+		menu,nav,section,summary,time,mark,audio,video {
+			margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;
+			background:transparent;
+		}
+		a { outline:0; }
+		table { border-collapse:collapse; border-spacing:0; }
+		input, select { vertical-align:middle; }
+		article,aside,details,figcaption,figure,footer,header,hgroup,nav,section {
+			display: block;
+		}
+		audio, canvas, video { display: inline-block; *display: inline; *zoom: 1; }
+
+		/* Contain floats: nicolasgallagher.com/micro-clearfix-hack/ */
+		.clearfix:before, .clearfix:after { content: ""; display: table; }
+		.clearfix:after { clear: both; }
+		.clearfix { zoom: 1; }
+
+		/* --- bro styles--- */
+
+		html {
+			font-size: 100%;
+			-webkit-tap-highlight-color: rgba(0,0,0,0);
+			-webkit-text-size-adjust: 100%;
+			-ms-text-size-adjust: 100%;
+		}
+
+		body {
+			font-size: 13px;
+			line-height: 1.231;
+			padding:10px 15px;
+		}
+
+		body, button, input, select, textarea {
+			font-family: "Lucida Grande", sans-serif;
+			color: #444;
+		}
+		h2 {
+			font-size:1.5em;
+			margin-bottom:.8em;
+		}
+		p {
+			margin-bottom: 1.5em;
+		}
+
+		.hideForDemo {
+			display:none;
+		}
+
+		/* --- tables --- */
+
+		#table {
+			border:6px solid #eee;
+			overflow:auto;
+			margin:0 0 10px;
+			position:relative;
+			float:left;
+		}
+		#table table {
+			border-left:1px solid #ccc;
+			border-right:1px solid #ccc;
+			font-size:0.92em;
+		}
+		#table td,
+		#table th {
+			padding:6px 10px;
+			text-align:left;
+			color:#3f3f3f;
+			border-top:1px solid #ccc;
+			border-bottom:1px solid #ccc;
+			vertical-align:middle;
+		}
+		#table tr:last-child td {
+			padding-bottom:8px;
+		}
+		#table th {
+			border-bottom:0;
+			text-transform:uppercase;
+			background:#f2f2f2;
+			color:#676767;
+			font-size:0.9em;
+			text-shadow:2px 2px 0 #fff;
+			height:30px;
+		}
+
+		tr:nth-child(2n) { background-color: #f6f7fa }
+
+		#table td.number,
+		#table td.fx,
+		#table td.money {
+			text-align:right;
+		}
